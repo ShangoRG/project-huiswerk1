@@ -9,7 +9,7 @@
  <input type="passowrd" name="pwd" placeholder="Password" required />
  <input type="submit" /></br>
  <a href="signup.php"> new user? Sign up!</a><br>
- <a href="lostpwd.php"> Forgot password? 
+ <a href="lostpsw.php"> Forgot password? 
 </form>
 
 </body>
