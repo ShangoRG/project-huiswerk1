@@ -1,21 +1,22 @@
-//maakt een database project1 aan
-CREATE database project1;
+-- Van Shango Grant
+-- tabel account aanmaken.
 
-//maakt een tabel account aan met de kolommen id als primary key en email en password //
 CREATE TABLE account (
     id int NOT NULL AUTO_INCREMENT,
-    email varchar(250),
-    password varchar(250),
-    PRIMARY KEY (id)
+    email varchar(250) not null UNIQUE,
+    password varchar(250)not null,
+    PRIMARY KEY(id)
 );
 
-//maakt een tabel persoon aan met de kolommen id als primary key en voornaam, tussenvegsel en achternaam //
+-- tabel persoon aanmaken.
+
 CREATE TABLE persoon (
-	id int NOT NULL AUTO_INCREMENT,
-    voornaam varchar(250),
-    tussenvoegsel varchar(250),
-    achternaam varchar(250),
-    PRIMARY KEY (id),
-    FOREIGN KEY (account_id) REFERENCES account(id)
+  id int NOT NULL AUTO_INCREMENT,
+  account_id int not null,
+  firstname varchar(250) not null,
+  middlename varchar(250),
+  lastname varchar(250) not null,
+  username varchar(250) not null,
+  PRIMARY KEY (id),
+  FOREIGN KEY (account_id) REFERENCES account(id)
 );
-
