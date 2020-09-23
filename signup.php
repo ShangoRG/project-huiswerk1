@@ -4,15 +4,16 @@
 	<title></title>
 </head>
 <body>
- <form action="signup.php" method="post">
-	 <input type="text" name="Fname" placeholder="FirstName" required /> <br>
-	 <input type="text" name="Insertn" placeholder="Insertion"  /> <br>
-	 <input type="text" name="Sname" placeholder="SecondName" required /> <br>
-	 <input type="text" name="Mail" placeholder="E-mail" required /> <br>
-	 <input type="text" name="Uname" placeholder="UserName" required /> <br>
-	 <input type="password" name="pwd" placeholder="Password" required /> <br>
-	 <input type="password" name="Rpwd" placeholder="Repeat Password" required /> <br>
- 	 <input type="submit" /></br>
- </form>
+	<form action="signup.php" method="post">
+		<input type="text" name="Firstname" placeholder="Voornaam" required /> <br>
+		<input type="text" name="Insert" placeholder="Instertion"  /> <br>
+		<input type="text" name="SecondName" placeholder="Tweedenaam" required /> <br>
+		<input type="text" name="Email" placeholder="E-mail" required /> <br>
+		<input type="text" name="LastName" placeholder="Achternaam" required /> <br>
+		<input type="text" name="Username" placeholder="Gebruikersnaam" required /> <br>
+		<input type="password" name="pssword" placeholder="Wachtwoord" required /> <br>
+		<input type="password" name="Repeat-pssword" placeholder="Heraal Wachtwoord" required /> <br>
+ 		<input type="submit" /></br>
+	</form>
 </body>
 </html>
