@@ -1,3 +1,11 @@
+<?php
+
+include 'database.php';
+
+$db = new database('localhost','root', '', 'project1',)
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +14,6 @@
 <body>
 	<form action="signup.php" method="post">
 		<input type="text" name="Firstname" placeholder="Voornaam" required /> <br>
-		<input type="text" name="Insert" placeholder="Instertion"  /> <br>
 		<input type="text" name="SecondName" placeholder="Tweedenaam" required /> <br>
 		<input type="text" name="Email" placeholder="E-mail" required /> <br>
 		<input type="text" name="LastName" placeholder="Achternaam" required /> <br>
