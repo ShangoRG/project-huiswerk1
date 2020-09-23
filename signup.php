@@ -1,11 +1,3 @@
-<?php
-
-include 'database.php';
-
-$db = new database('localhost','root', '', 'project1',)
-
- ?>
-
 <!DOCTYPE html>
 <html>
 <head>
