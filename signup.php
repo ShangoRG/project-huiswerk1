@@ -1,18 +1,45 @@
-<!DOCTYPE html>
+<?php
+
+include 'database.php';
+
+$db = new database('localhost', 'root', '', 'project1', 'utf8');
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+  $username = $_POST['uname'];
+  $firstname = $_POST['fname'];
+  $middlename = $_POST['mname'];
+  $lastname = $_POST['lname'];
+  $password =$_POST['pwd'];
+  $email = $_POST['email'];
+
+  $db->insert($username, $firstname, $middlename, $lastname, $password, $email);
+}
+
+
+ ?>
+
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-	<form action="signup.php" method="post">
-		<input type="text" name="Firstname" placeholder="Voornaam" required /> <br>
-		<input type="text" name="SecondName" placeholder="Tweedenaam" required /> <br>
-		<input type="text" name="Email" placeholder="E-mail" required /> <br>
-		<input type="text" name="LastName" placeholder="Achternaam" required /> <br>
-		<input type="text" name="Username" placeholder="Gebruikersnaam" required /> <br>
-		<input type="password" name="pssword" placeholder="Wachtwoord" required /> <br>
-		<input type="password" name="Repeat-pssword" placeholder="Heraal Wachtwoord" required /> <br>
- 		<input type="submit" /></br>
-	</form>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Registratie scherm</title>
+  </head>
+
+  <body>
+  	<form method="post" action='signup.php' method='post' accept-charset='UTF-8'>
+      <fieldset >
+        <legend>Registratie</legend>
+        <input type="text" name="uname" placeholder="Gebruikersnaam" required/>
+        <input type="text" name="fname" placeholder="Voornaam" required/>
+      	<input type="text" name="mname" placeholder="Middelnaam" />
+      	<input type="text" name="lname" placeholder="Achternaam" required/><br/>
+        <input type="email" name="email" placeholder="E-mail" required/>
+        <input type="password" name="pwd" placeholder="Wachtwoord" required/>
+        <input type="password" name="repeatpwd" placeholder="Herhaal wachtwoord" required/>
+        <input type="submit" value="signup"/> 
+      </fieldset>
+      <a href="login.php">Ik heb al een account. Login!</a>
+    </form>
+  </body>
 </html>
